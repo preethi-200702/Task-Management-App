@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+  --font-hand: 'Patrick Hand', cursive;
+}
+
+:root {
+  --accent-color: #8b5cf6;
+  font-family: var(--font-sans);
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #fdfbf7;
+  color: #2c2530;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: #17151e;
+  color: #f5eff8;
+}
+
+/* Whimsical font utility shortcuts */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+/* Cozy Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e3dad0;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #332d3f;
+}
