@@ -1,6 +1,6 @@
 // Centralized API Client with Cookie + Bearer Token Dual Support
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/+$/, '');
 
 class ApiClient {
   constructor() {
